@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<div id="headers">
+    <h1 style="text-align:center">Student Details</h1>
+<table id = "personal-details">
+<tr>
+<th>Roll Number</th>
+<th>First Name</th>
+<th>Last Name</th>
+</tr>
+<tr>
+<td>{{student.roll_number}}</td>
+<td>{{student.first_name}}</td>
+<td>{{student.last_name}}</td>
+</tr>
+</table>
+</div>
+<div class="container">
+    <h1 style="text-align:center">Enrollment List</h1>
+<table id = "enroll-table">
+<tr>
+<th>S. No.</th>
+<th>Course Code</th>
+<th>Course Name</th>
+<th>Course Description</th>
+</tr>
+    {% for courses in student.courses %}
+    <tr>
+        <td>{{courses.course_id}}</td>
+        <td>{{courses.course_code}}</td>
+        <td>{{courses.course_name}}</td>
+        <td>{{courses.course_description}}</td>
+    </tr>
+    {% endfor %}
+<tr>
+</table>
+</div>
+<a href="/" >Go Back </a>
+</body>
+</html>

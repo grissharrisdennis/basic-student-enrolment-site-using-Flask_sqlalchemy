@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Update</title>
+</head>
+<body>
+   <h1>Update Student</h1>
+<form action="/student/{{student.student_id}}/update" method="POST" id="update-form">
+    <br>
+<div>
+<label>Roll Number:</label>
+<input type="text" name="roll" value="{{student.roll_number}}" disabled />
+</div>
+    <br>
+<div>
+<label>First Name:</label>
+<input type="text" name="f_name" value="" required />
+</div>
+    <br>
+<div>
+<label>Last Name:</label>
+<input type="text" name="l_name" value=""/>
+</div>
+    <br>
+<div>
+<label>Select Courses: </label>
+<input type="checkbox" name="courses" value="course_1" />
+<label>MAD I</label>
+<input type="checkbox" name="courses" value="course_2" />
+<label>DBMS</label>
+<input type="checkbox" name="courses" value="course_3" />
+<label>PDSA</label>
+<input type="checkbox" name="courses" value="course_4" />
+<label>BDM</label>
+</div>
+    <br>
+<div>
+<input type="submit" value = "Submit">
+</div>
+    <br>
+</form>
+
+</body>
+</html>
